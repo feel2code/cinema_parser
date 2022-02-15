@@ -20,4 +20,4 @@ for year in range(2017, 2023):
 
 header = ('film_name', 'link', 'year')
 df = pd.DataFrame(data, columns=header)
-df.to_csv('/Users/felixmac/Desktop/films.csv', sep=';', encoding='utf8')
+df.to_csv('/Users/user/Desktop/films.csv', sep=';', encoding='utf8')
