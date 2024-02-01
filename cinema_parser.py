@@ -16,9 +16,9 @@ for year in range(2017, cur_year + 1):
         pages.text,
         'html.parser'
     )
-    
+
     time.sleep(1)
-    
+
     all_films = soup.findAll(
         'a',
         class_='movieItem_title'
