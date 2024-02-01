@@ -3,10 +3,12 @@ import time
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+from datetime import datetime
 
 
+cur_year = datetime.utcnow().year
 data = []
-for year in range(2017, 2023):
+for year in range(2017, cur_year + 1):
     pages = requests.get(
         f'https://www.kinoafisha.info/rating/movies/{year}/'
     )
@@ -36,7 +38,7 @@ data_file = pd.DataFrame(
     columns=header
 )
 data_file.to_csv(
-    '/Users/user/Desktop/films.csv',
+    'films.csv',
     sep=';',
     encoding='utf8'
 )
